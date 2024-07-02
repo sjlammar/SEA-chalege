@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7yinf5eendxu"]
+
+[ext_resource type="Script" path="res://up_bar.gd" id="1_h7xkp"]
+[ext_resource type="Texture2D" uid="uid://123f2xua3lta" path="res://proto/line.png" id="1_hmod5"]
+[ext_resource type="FontFile" uid="uid://c3wo5u56m11d" path="res://proto/fff-forward/FFFFORWA.TTF" id="2_1i02l"]
+[ext_resource type="FontFile" uid="uid://c6boy8utek56s" path="res://proto/back-to-1982/BACKTO1982.TTF" id="3_q3sgt"]
+
+[node name="UpBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -600.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h7xkp")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_hmod5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -552.0
+offset_top = -26.0
+offset_right = -52.0
+offset_bottom = 26.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 31
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1i02l")
+theme_override_font_sizes/font_size = 32
+text = "Service"
+flat = true
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1i02l")
+theme_override_font_sizes/font_size = 32
+text = "Contact"
+flat = true
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1i02l")
+theme_override_font_sizes/font_size = 32
+text = "Review"
+flat = true
+
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -32.5
+offset_right = 173.0
+offset_bottom = 32.5
+grow_vertical = 2
+theme_override_constants/separation = 13
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_q3sgt")
+theme_override_font_sizes/font_size = 64
+text = "SEA"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_1i02l")
+theme_override_font_sizes/font_size = 32
+text = "Salon"
+
+[connection signal="button_down" from="HBoxContainer/Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button2" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="HBoxContainer/Button3" to="." method="_on_button_3_button_down"]

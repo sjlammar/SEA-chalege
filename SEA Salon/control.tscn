@@ -1,0 +1,98 @@
+[gd_scene load_steps=7 format=3 uid="uid://cm5y3n10wa4y1"]
+
+[ext_resource type="PackedScene" uid="uid://e1hl3rigbto5" path="res://Background.tscn" id="1_e34si"]
+[ext_resource type="PackedScene" uid="uid://c7yinf5eendxu" path="res://up_bar.tscn" id="2_2xoro"]
+[ext_resource type="Texture2D" uid="uid://b8ns2hac0l0mq" path="res://proto/style.png" id="3_pbs2x"]
+[ext_resource type="FontFile" uid="uid://c3wo5u56m11d" path="res://proto/fff-forward/FFFFORWA.TTF" id="4_0cjua"]
+[ext_resource type="Texture2D" uid="uid://dccwhtw1xxgy5" path="res://proto/mane.png" id="5_lxs4h"]
+[ext_resource type="Texture2D" uid="uid://v1iiqocvoppl" path="res://proto/face.png" id="6_e1wby"]
+
+[node name="Service" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" parent="." instance=ExtResource("1_e34si")]
+layout_mode = 1
+
+[node name="UpBar" parent="." instance=ExtResource("2_2xoro")]
+layout_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -79.5
+offset_bottom = 187.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="H&S" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_pbs2x")
+
+[node name="Label" type="Label" parent="HBoxContainer/H&S"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = 2.0
+offset_right = 104.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_0cjua")
+theme_override_font_sizes/font_size = 16
+text = "Haircuts and Styling"
+
+[node name="H&S2" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_lxs4h")
+
+[node name="Label" type="Label" parent="HBoxContainer/H&S2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = 4.0
+offset_right = 104.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_0cjua")
+theme_override_font_sizes/font_size = 16
+text = "Manicure and Pedicure"
+
+[node name="H&S3" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_e1wby")
+
+[node name="Label" type="Label" parent="HBoxContainer/H&S3"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = 4.0
+offset_right = 104.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_0cjua")
+theme_override_font_sizes/font_size = 16
+text = "Facial Treatments"

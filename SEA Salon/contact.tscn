@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1flifgx2gvd8"]
+
+[ext_resource type="PackedScene" uid="uid://e1hl3rigbto5" path="res://Background.tscn" id="1_gssk8"]
+[ext_resource type="PackedScene" uid="uid://c7yinf5eendxu" path="res://up_bar.tscn" id="2_kb5qf"]
+[ext_resource type="FontFile" uid="uid://c3wo5u56m11d" path="res://proto/fff-forward/FFFFORWA.TTF" id="3_02dlp"]
+
+[node name="Contact" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bg" parent="." instance=ExtResource("1_gssk8")]
+layout_mode = 1
+
+[node name="UpBar" parent="." instance=ExtResource("2_kb5qf")]
+layout_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -364.5
+offset_top = -25.0
+offset_right = 364.5
+offset_bottom = 149.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_02dlp")
+theme_override_font_sizes/font_size = 30
+text = "Contact us for the detail :"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_02dlp")
+theme_override_font_sizes/font_size = 30
+text = "Thomas, Phone Number : 08123456789"
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_02dlp")
+theme_override_font_sizes/font_size = 30
+text = "Sekar, Phone Number    : 08164829372"
